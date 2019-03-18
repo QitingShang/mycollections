@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>无标题文档</title>
+    <style type="text/css">
+        <!--
+        #zhuti{
+            width:280px;
+        }
+        #uu{
+            margin:0px;
+            padding:0px;
+        }
+        .h{
+            width:280px;
+            margin:0px;
+            list-style-type: none;
+            font-size:13px;
+            color:#0066FF;
+            line-height:39px;
+            padding-left:15px;
+        }
+        .xianshi{
+            width:280px;
+            height:45px;
+            border:2px #FF9900 solid;
+            background-color:#FFF3E8;
+            padding-top:10px;
+            margin:0px;
+            list-style-type: none;
+            font-size:12px;
+            font-weight:bold;
+            color:#0066FF;
+            padding-left:15px;
+            display:none;
+        }
+        -->
+    </style>
+    <script>
+        var num=12;     //确定li数量。
+        function a()   //网页加载的时候设置li背景颜色。
+        {
+            var a=document.getElementById("uu").getElementsByTagName("li");
+            for(var i=0;i<num;i++)
+            {
+                if((i%2)==1) a[i].style.display="none";
+                if((i%4)==0) a[i].style.backgroundColor="#dddddd";  //设置li的背景颜色。
+            }
+        }
+
+        function over(n)
+        {
+            var a=document.getElementById("uu").getElementsByTagName("li");
+            for(var i=0;i<num;i++)     //一个循环让鼠标经过的li显示对应的装有详细内容的li。
+            {
+                if((i%2)==1) a[i].style.display="none";
+                else
+                    a[i].style.display="block";
+            }
+            a[n].style.display="none";
+            a[n+1].style.display="block";
+        }
+    </script>
+</head>
+
+<body onload="a()">
+<div id="zhuti">
+    <ul id="uu">
+        <li class="h" onmouseover="over(0)">知性OL－简约大方通勤必备 </li>
+        <li class="xianshi">知性OL－简约大方通勤必备知性OL－简约大方通勤必备<br /><font color="#CC0000">淘宝价：xx</font></li>
+        <li class="h" onmouseover="over(2)">淑女系－可爱小女生最爱 </li>
+        <li class="xianshi">淑女系－可爱小女生最爱淑女系－可爱小女生最爱<br /><font color="#CC0000">淘宝价：xx</font></li>
+        <li class="h" onmouseover="over(4)">时尚派－柱形手提斜挎女包 </li>
+        <li class="xianshi">时尚派－柱形手提斜挎女包时尚派－柱形手提斜挎女包<br /><font color="#CC0000">淘宝价：xx</font></li>
+        <li class="h" onmouseover="over(6)">蝴蝶结－闪金淡蓝可爱单鞋 </li>
+        <li class="xianshi">蝴蝶结－闪金淡蓝可爱单鞋蝴蝶结－闪金淡蓝可爱单鞋<br /><font color="#CC0000">淘宝价：xx</font></li>
+        <li class="h" onmouseover="over(8)">坡跟鞋－韩版甜美坡跟凉鞋 </li>
+        <li class="xianshi">坡跟鞋－韩版甜美坡跟凉鞋坡跟鞋－韩版甜美坡跟凉鞋<br /><font color="#CC0000">淘宝价：xx</font></li>
+        <li class="h" onmouseover="over(10)">高跟鞋－复古小名媛圆头鞋 </li>
+        <li class="xianshi">高跟鞋－复古小名媛圆头鞋高跟鞋－复古小名媛圆头鞋<br /><font color="#CC0000">淘宝价：xx</font></li>
+    </ul>
+</div>
+</body>
+</html>
